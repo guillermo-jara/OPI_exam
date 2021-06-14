@@ -38,5 +38,7 @@ country_dict.coalesce(1).write.format('com.databricks.spark.csv').save('country_
 country_dict=spark.read.csv('file:///M:/Documentos/OPI/country_dict.csv', header=True, inferSchema=True)
 df1=df.join(country_dict, how='inner', on='country')
 
+sc.stop()
+
 
 
