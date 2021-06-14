@@ -30,7 +30,7 @@ res5=df.groupby(['cadenaComercial', 'producto'])['marca'].count().reset_index()
 
 print("5. La cadena comercial con mayor cantidad de productos monitoreados es "+
       res5.groupby('cadenaComercial')['producto'].nunique().sort_values(ascending=False).head(1).index[0] + 
-      " con un total de " + str(res5.groupby('cadenaComercial')['producto'].nunique().sort_values(ascending=False).head(1)[0]) 
+      " con un total de " + str(res5.groupby('cadenaComercial')['producto'].nunique().sort_values(ascending=False).head(1)[0])  +
       " productos.\n" )
 
 
